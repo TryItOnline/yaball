@@ -155,7 +155,7 @@ module YABALL
     end
     def input
       return -1 if STDIN.eof?
-      return STDIN.getc unless @charin
+      return STDIN.getc.ord unless @charin
       @charin=false if @charin == :once
       return read_char
     end
